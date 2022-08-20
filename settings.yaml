@@ -6,11 +6,6 @@ genernal:
       name: subtitle
       label: '博客副标题'
       type: text
-    author_text:
-      name: author_text
-      label: '作者寄语'
-      type: textarea
-      placeholder: '可以插入作者自述、版权说明等内容，字符串格式，支持 HTML 内容。'
     icp:
       name: icp
       label: 'ICP 备案号'
@@ -21,12 +16,6 @@ genernal:
       label: '公网安备案号'
       type: text
       placeholder: '填入 ICP 备案号，没有则不填.'
-    background:
-      name: background
-      label: 主题背景
-      type: text
-      default: 'https://api.paugram.com/wallpaper?source=gh'
-      placeholder: '在此填写主题地址'
     dark:
       name: dark
       label: 夜间模式
@@ -39,50 +28,55 @@ genernal:
           label: 开启
         - value: false
           label: 关闭
-    fancybox:
-      name: fancybox
-      label: Fancybox图片灯箱效果
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    canvas_nest_bool:
-      name: canvas_nest_bool
-      label: canvas_nest.js动态背景
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    canvas_nest_color:
-      name: canvas_nest_color
-      label: 颜色(RGB的取值,如：0,0,255)
-      type: text
-      default: '0,0,255'
-    canvas_nest_opacity:
-      name: canvas_nest_opacity
-      label: 鼠标与各个点之间连线的透明值
-      type: text
-      default: '0.5'
-    canvas_nest_zIndex:
-      name: canvas_nest_zIndex
-      label: 特效显示的优先层级
-      type: text
-      default: '-2'
-    canvas_nest_count:
-      name: canvas_nest_count
-      label: 背景中漂浮点的数量
-      type: text
-      default: '50'
+
+    # 灯箱效果暂未改好，先行注释
+    # fancybox:
+    #   name: fancybox
+    #   label: Fancybox图片灯箱效果
+    #   type: radio
+    #   data-type: bool
+    #   default: false
+    #   description: ''
+    #   options:
+    #     - value: true
+    #       label: 开启
+    #     - value: false
+    #       label: 关闭
+
+    # 长篇文章下卡顿
+    # canvas_nest_bool:
+    #   name: canvas_nest_bool
+    #   label: canvas_nest.js动态背景
+    #   type: radio
+    #   data-type: bool
+    #   default: false
+    #   description: ''
+    #   options:
+    #     - value: true
+    #       label: 开启
+    #     - value: false
+    #       label: 关闭
+    # canvas_nest_color:
+    #   name: canvas_nest_color
+    #   label: 颜色(RGB的取值,如：0,0,255)
+    #   type: text
+    #   default: '0,0,255'
+    # canvas_nest_opacity:
+    #   name: canvas_nest_opacity
+    #   label: 鼠标与各个点之间连线的透明值
+    #   type: text
+    #   default: '0.5'
+    # canvas_nest_zIndex:
+    #   name: canvas_nest_zIndex
+    #   label: 特效显示的优先层级
+    #   type: text
+    #   default: '-2'
+    # canvas_nest_count:
+    #   name: canvas_nest_count
+    #   label: 背景中漂浮点的数量
+    #   type: text
+    #   default: '50'
+
     love:
       name: love
       label: 点击桃心
@@ -95,44 +89,6 @@ genernal:
           label: 开启
         - value: false
           label: 关闭
-    copycode:
-      name: copycode
-      label: 代码一键复制
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    mathjax_bool:
-      name: mathjax_bool
-      label: 数学公式支持
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    mathjax:
-      name: mathjax
-      label: mathjax版本
-      # 表单项类型：下拉框
-      type: select              
-      # 数据类型：bool，string，long，double
-      data-type: string           
-      default: mathjax2.ftl
-      description: ''
-      options: 
-        - value: mathjax.ftl
-          label: mathjax
-        - value: mathjax2.ftl
-          label: mathjax2  
     
 # 右侧小部件
 widgets:
@@ -186,33 +142,9 @@ widgets:
           label: 开启
         - value: false
           label: 关闭
-    tag_bool:
-      name: tag_bool
-      label: 标签
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
     recent_posts_bool:
       name: recent_posts_bool
       label: 最近文章
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    recent_comments_bool:
-      name: recent_comments_bool
-      label: 最近评论
       type: radio
       data-type: bool
       default: false
@@ -234,68 +166,14 @@ widgets:
           label: 开启
         - value: false
           label: 关闭
-      
 
-    # 统计跟踪
-    google_analytics_bool:
-      name: google_analytics_bool
-      label: Google Analytics
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    google_analytics:
-      name: google_analytics
-      label: 'Google Analytics 跟踪ID'
-      type: text
-      placeholder: 'Google Analytics 跟踪ID.'
-    baidu_analytics_bool:
-      name: baidu_analytics_bool
-      label: 百度统计
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    baidu_analytics:
-      name: baidu_analytics
-      label: '百度统计 跟踪ID'
-      type: text
-      placeholder: '百度统计 跟踪ID'
-    microsoft_clarity_bool:
-      name: microsoft_clarity_bool
-      label: Microsoft Clarity
-      type: radio
-      data-type: bool
-      default: false
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    microsoft_clarity:
-      name: microsoft_clarity
-      label: 'Microsoft Clarity 跟踪ID'
-      type: text
-      placeholder: 'Microsoft Clarity 跟踪ID'
-
-# 捐赠
-donate:
-  label: 捐赠打赏
+# 正文设置
+post_settings:
+  label: 正文设置
   items:
-    donate_enable:
-      name: donate_enable
-      label: 打赏开关
+    KaTex_plugin:
+      name: KaTex_plugin
+      label: KaTex数学公式支持
       type: radio
       data-type: bool
       default: false
@@ -305,37 +183,6 @@ donate:
           label: 开启
         - value: false
           label: 关闭
-    donate_github:
-      name: donate_github
-      label: 'GitHub URL'
-      type: text
-      placeholder: 'e.g. https://github.com/Kaiyuan/donate-page'
-    donate_alipay_qr:
-      name: donate_alipay_qr
-      label: '支付宝二维码'
-      type: text
-      placeholder: '支付宝二维码图片地址'
-    donate_wechat_qr:
-      name: donate_wechat_qr
-      label: '微信二维码'
-      type: text
-      placeholder: '微信二维码图片地址'
-    donate_btc_qr:
-      name: donate_btc_qr
-      label: 'BTC二维码'
-      type: text
-      placeholder: 'BTC二维码图片地址'
-    donate_btc_key:
-      name: donate_btc_key
-      label: 'Bitcoin key'
-      type: text
-      placeholder: 'e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L'
-    donate_paypal_url:
-      name: donate_paypal_url
-      label: 'Paypal URL'
-      type: text
-      placeholder: 'e.g. https://www.paypal.me/xxxxxx'
-    
 
     # 下拉框
     code_css:
@@ -536,31 +383,109 @@ donate:
           label: xt256
         - value: zenburn.min.css
           label: zenburn
+      
+# 统计跟踪
+analytics:
+  label: 第三方统计设置
+  items:
+    google_analytics_bool:
+      name: google_analytics_bool
+      label: Google Analytics
+      type: radio
+      data-type: bool
+      default: false
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    google_analytics:
+      name: google_analytics
+      label: 'Google Analytics 跟踪ID'
+      type: text
+      placeholder: 'Google Analytics 跟踪ID.'
+    baidu_analytics_bool:
+      name: baidu_analytics_bool
+      label: 百度统计
+      type: radio
+      data-type: bool
+      default: false
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    baidu_analytics:
+      name: baidu_analytics
+      label: '百度统计 跟踪ID'
+      type: text
+      placeholder: '百度统计 跟踪ID'
+    microsoft_clarity_bool:
+      name: microsoft_clarity_bool
+      label: Microsoft Clarity
+      type: radio
+      data-type: bool
+      default: false
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    microsoft_clarity:
+      name: microsoft_clarity
+      label: 'Microsoft Clarity 跟踪ID'
+      type: text
+      placeholder: 'Microsoft Clarity 跟踪ID'
 
-    night:
-      name: night
-      label: 自动切换夜间模式
-      type: radio
-      data-type: bool
-      default: true
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-    copyright:
-      name: copyright
-      label: 复制的时候弹出保留原站链接说明
-      type: radio
-      data-type: bool
-      default: true
-      description: ''
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
+# 捐赠,这部分也还未移植完成
+# donate:
+#   label: 捐赠打赏
+#   items:
+#     donate_enable:
+#       name: donate_enable
+#       label: 打赏开关
+#       type: radio
+#       data-type: bool
+#       default: false
+#       description: ''
+#       options:
+#         - value: true
+#           label: 开启
+#         - value: false
+#           label: 关闭
+#     donate_github:
+#       name: donate_github
+#       label: 'GitHub URL'
+#       type: text
+#       placeholder: 'e.g. https://github.com/Kaiyuan/donate-page'
+#     donate_alipay_qr:
+#       name: donate_alipay_qr
+#       label: '支付宝二维码'
+#       type: text
+#       placeholder: '支付宝二维码图片地址'
+#     donate_wechat_qr:
+#       name: donate_wechat_qr
+#       label: '微信二维码'
+#       type: text
+#       placeholder: '微信二维码图片地址'
+#     donate_btc_qr:
+#       name: donate_btc_qr
+#       label: 'BTC二维码'
+#       type: text
+#       placeholder: 'BTC二维码图片地址'
+#     donate_btc_key:
+#       name: donate_btc_key
+#       label: 'Bitcoin key'
+#       type: text
+#       placeholder: 'e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L'
+#     donate_paypal_url:
+#       name: donate_paypal_url
+#       label: 'Paypal URL'
+#       type: text
+#       placeholder: 'e.g. https://www.paypal.me/xxxxxx'
 
 social:
   label: 社交链接

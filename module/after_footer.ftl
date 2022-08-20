@@ -12,13 +12,9 @@
     <script type="text/javascript" src="${theme_base!}/source/js/love.js?v=${theme.version!}"></script>
 </#if>
 
-<#if settings.copycode!false>
-    <script type="text/javascript" src="${theme_base!}/source/js/copycode.js?v=${theme.version!}" successtext="复制成功!"></script>
-    <link rel="stylesheet" type="text/css" href="${theme_base!}/source/css/copycode.css?v=${theme.version!}" />
-</#if>
-
-<#if settings.mathjax_bool!false>
-    <#include "${setting.mathjax}"/>
+<#if settings.KaTex_plugin!false>    
+    <link href="${theme_base!}/source/plugins/katex/dist/katex.min.css?v=${theme.version!}" rel="stylesheet">
+    <script src="${theme_base!}/source/plugins/katex/dist/katex.min.js?v=${theme.version!}"></script>
 </#if>
 
 <script type="text/javascript" src="${theme_base!}/source/js/codeblock-resizer.js?v=${theme.version!}"></script>
