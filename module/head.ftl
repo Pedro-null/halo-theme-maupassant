@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css" />
     <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="${theme_base!}/source/js/main.js?v=${theme.version!}"></script>
     <link rel="icon" mask="" sizes="any" href="${blog_logo!}" />
     <link rel="Shortcut Icon" type="image/x-icon" href="${blog_logo!}" />
     <link rel="apple-touch-icon" href="${blog_logo!}" />

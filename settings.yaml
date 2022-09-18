@@ -184,6 +184,19 @@ post_settings:
         - value: false
           label: 关闭
 
+    toc_bool:
+      name: toc_bool
+      label: 目录
+      type: radio
+      data-type: bool
+      default: true
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+
     # 下拉框
     code_css:
       name: code_css

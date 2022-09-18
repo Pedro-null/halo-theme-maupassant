@@ -40,5 +40,12 @@
 
         <#--  评论模块  -->
         <@global.comment target=post type="post" />
+
+        <#--  目录  -->
+        <#if settings.toc_bool!false>
+            <script type="text/javascript">
+                tree();
+            </script>
+        </#if>
     </div>
 </@layout>
